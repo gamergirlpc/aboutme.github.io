@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.landingpage-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+
+nav ul li {
+  align-self: center;
+  list-style: none;
+  font-size: 18px;
+}
+
+nav li a {
+  padding: 10px 20px;
+  color: black;
+  transition: all 0.5s ease 0s;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: rgb(135, 206, 250);
+}
+
+/* button on nav bar */
+.cta {
+  background-color: rgba(135, 206, 250, 1);
+  transition: all 0.5s ease 0s;
+  padding: 10px 20px;
+  border-radius: 3rem;
+  color: white;
+}
+
+.cta:hover {
+  color: black;
+  background-color: rgba(135, 206, 250, 0.5);
+}
+
+/*landing page image and heading */
+section.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 50%;
+  width: 100%;
+  max-width: 1440px;
+  padding: 12px;
+}
+
+.wrapper-image {
+  height: auto;
+  width: 35%;
+}
+
+.intro-text {
+  padding-left: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.25rem;
+}
+
+.intro-text p {
+  max-width: 400px;
+  padding-top: 20px;
+}
+
+/*about me button, second cta */
+button {
+  padding: 10px 20px;
+  background-color: rgba(135, 206, 250, 1);
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 3rem;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(135, 206, 250, 0.5);
+  color: black;
+}
+
+footer {
+  background-color: rgb(135, 206, 250);
+  padding: 1rem;
+  text-align: center;
+  display: block;
+  justify-content: center;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.socials li a {
+  padding: 0px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.socials li a:hover {
+  color: black;
+}
+
+/* media queries small screen */
+@media screen and (max-width: 620px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .intro-text {
+    padding: 20px 15%;
+    align-items: center;
+  }
+
+  .intro-text p {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  nav {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    align-self: auto;
+  }
+}
+
+/* about me page */
+.about-me-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-me-text {
+  max-width: 40ch;
+
+  padding: 3em 1em;
+
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.about-me p {
+  padding: 2em 1em;
+
+  line-height: 1.5rem;
+}
+
+.congee-banff {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+  box-shadow: 8px 9px 9px 0 rgba(0, 0, 0, 0.5);
+}
+
+.about-me {
+  margin-right: 2%;
+  margin: 2%;
+}
+
+/* card section starts here with divider */
+.family-divider {
+  font-family: "raleway", sans-serif;
+  font-size: 2.2em;
+  text-align: center;
+
+  margin: 2%;
+
+  background-image: -webkit-linear-gradient(#4a00e0, #51b0d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+/* three family cards 
+need to fill in paragraph section
+adjust accordingly if adding content*/
+.family-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 500px;
+  gap: 30px;
+
+  margin: auto;
+  margin-bottom: 3%;
+
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* transition fade bottom up for cards */
+.family-cards .three-cards {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.family-cards .three-cards .image-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transition: 0.3s;
+}
+
+.family-cards .three-cards .image-card img {
+  width: 100%;
+}
+
+.family-cards .three-cards .card-content {
+  position: absolute;
+
+  width: 100%;
+  height: 60%;
+  bottom: -100%;
+  padding: 60px 20px 20px;
+
+  box-sizing: border-box;
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.family-cards .three-cards:hover .card-content {
+  bottom: 0;
+}
+
+.family-cards .three-cards:nth-child(1) .card-content {
+  background: linear-gradient(0deg, #3f3a85, transparent);
+}
+
+.family-cards .three-cards:nth-child(2) .card-content {
+  background: linear-gradient(0deg, #195268, transparent);
+}
+
+.family-cards .three-cards:nth-child(3) .card-content {
+  background: linear-gradient(0deg, #203f83, transparent);
+}
+
+.family-cards .three-cards .card-content h2 {
+  margin-bottom: 8px;
+  padding: 0;
+
+  color: #fff;
+  font-size: 22px;
+}
+
+.family-cards .three-cards .card-content h3 {
+  color: #ffeb3b;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.family-cards .three-cards .card-content p {
+  margin: 0;
+  padding: 0;
+
+  color: #fff;
+  font-size: 14px;
+}
+
+/* gallery starts here */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px;
+  margin: 3%;
+}
+
+.picture-gallery img {
+  height: 40vh;
+  flex-grow: 0;
+  margin: 1em;
+}
+
+.gallery-item {
+  margin: 20px;
+}
+
+figcaption {
+  text-align: center;
+  max-width: 20ch;
+  margin: auto;
+}
